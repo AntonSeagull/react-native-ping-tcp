@@ -13,10 +13,10 @@ import com.facebook.react.bridge.JavaScriptModule;
 public class RNReactNativePingTcpPackage implements ReactPackage {
     @Override
     public List<NativeModule> createNativeModules(ReactApplicationContext reactContext) {
-      return Arrays.<NativeModule>asList(new RNReactNativePingTcpModule(reactContext));
+      return Arrays.<NativeModule>asList(new RNApptorSimpleTcpModule(reactContext));
     }
 
-    // Deprecated from RN 0.47
+    @Override
     public List<Class<? extends JavaScriptModule>> createJSModules() {
       return Collections.emptyList();
     }
