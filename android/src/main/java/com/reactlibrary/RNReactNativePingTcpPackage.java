@@ -13,7 +13,7 @@ import com.facebook.react.bridge.JavaScriptModule;
 public class RNReactNativePingTcpPackage implements ReactPackage {
     @Override
     public List<NativeModule> createNativeModules(ReactApplicationContext reactContext) {
-      return Arrays.<NativeModule>asList(new RNApptorSimpleTcpModule(reactContext));
+      return Arrays.<NativeModule>asList(new RNReactNativePingTcpModule(reactContext));
     }
 
     @Override
