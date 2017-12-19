@@ -1,9 +1,18 @@
 
 # react-native-ping-tcp
 
+It's simple react-native module for working with TCP. 
+The module have only one method - Connect :)
+
+After calling Connect:
+- Open TCP connect with server and port
+- Send message in open channel
+- Waiting answed and close connect
+
+
 ## Getting started
 
-`$ npm install react-native-ping-tcp --save`
+`$ npm install https://github.com/AntonSeagull/react-native-ping-tcp --save`
 
 ### Mostly automatic installation
 
@@ -34,20 +43,14 @@
       compile project(':react-native-ping-tcp')
   	```
 
-#### Windows
-[Read it! :D](https://github.com/ReactWindows/react-native)
-
-1. In Visual Studio add the `RNReactNativePingTcp.sln` in `node_modules/react-native-ping-tcp/windows/RNReactNativePingTcp.sln` folder to their solution, reference from their app.
-2. Open up your `MainPage.cs` app
-  - Add `using React.Native.Ping.Tcp.RNReactNativePingTcp;` to the usings at the top of the file
-  - Add `new RNReactNativePingTcpPackage()` to the `List<IReactPackage>` returned by the `Packages` method
-
-
 ## Usage
 ```javascript
+
 import RNReactNativePingTcp from 'react-native-ping-tcp';
 
-// TODO: What to do with the module?
-RNReactNativePingTcp;
-```
-  
+
+RNReactNativePingTcp.Connect(message, server, port, (error, request) => {
+	...
+});
+
+PORT - for Android it's number, for iOS it's string
